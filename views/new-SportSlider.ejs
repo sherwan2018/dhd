@@ -1,0 +1,44 @@
+<%include partials/header%>
+
+<div class="container">
+
+  <div class="row">
+
+  <div class="col-lg-8 col-md-8  col-sm-8">
+    <h2>Create New Sport-Slide post</h2>
+
+
+
+
+  <form action="/SportSlider"  method="post">
+   <div class="form-group">
+     <label for="Simage">image</label>
+     <input name="Simage" type="text" class="form-control" id="image" placeholder="Image">
+
+   </div>
+   <div class="form-group">
+
+     <label for="Sheadline">headline</label>
+     <input  name="Sheadline" type="text" class="form-control" id="headline"  placeholder="headline">
+   </div>
+
+   <div class="form-group">
+
+     <label for="Sdescription">description</label>
+     <input  name="Sdescription" type="text" class="form-control" id="headline"  placeholder="description">
+   </div>
+
+
+
+
+   <button type="submit" class="btn btn-primary">Submit</button>
+ </form>
+
+
+</div>
+</div>
+
+</div>
+
+
+<%include partials/footer%>

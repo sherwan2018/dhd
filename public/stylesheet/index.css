@@ -1,0 +1,163 @@
+body{
+
+  font-family: 'Lato', sans-serif;
+}
+
+
+.container{
+  overflow: auto;
+  padding: 1em;
+}
+
+
+
+.add-new{
+  padding: 1em;
+}
+
+.logo{
+  width:2.5em;
+  height:2.5em;
+
+}
+
+
+
+
+#yo{
+  padding:2em;
+  width:70%;
+  display: inline-block;
+
+
+}
+
+
+
+
+
+
+
+#yo2{
+  width: 30%;
+  margin: 0;
+  float: right;
+  overflow: auto;
+
+}
+
+.show-section{
+  background-color: aquamarine;
+  padding: 1em;
+}
+ .show-section span{
+   text-align: right;
+ }
+
+ .span{
+   text-align: left;
+
+ }
+
+
+
+/* footer */
+.page-footer{
+  background-color: #f8f9fa;
+}
+
+
+#contact-form{
+  padding: 2em;
+}
+
+
+
+
+/* slider caption */
+.backhead{
+
+  background-color: lightblue;
+  width: 20%;
+  border-radius: 0.2em;
+  padding: 0.2em;
+  background: red;
+  opacity:0.85;
+  float: right;
+
+
+
+
+
+
+
+
+}
+
+
+
+
+
+
+.backhead2{
+  color: white;
+  background-color: black;
+  border-radius:0.2em;
+  padding: 0.2em;
+  display: block;
+  opacity:0.85;
+  float: left;
+  width: 100%
+
+
+
+
+}
+
+:hover.nav-link{
+
+    transition:0.3s;
+    background-color: #11a2df;
+    border-radius: 0.3em;
+    color:white !important;
+    padding:0.5em;
+
+
+}
+
+
+
+
+
+h2{
+  text-align:center;
+  padding: 20px;
+}
+
+
+
+
+
+/* gallery img row */
+#g-img{
+
+  margin: 2em auto;
+  padding: 1em;
+
+}
+
+
+#img-col{
+  padding: 1em;
+}
+
+
+
+
+.navbar-light .navbar-nav .nav-link{
+
+  color:black;
+}
+
+
+

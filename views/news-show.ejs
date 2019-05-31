@@ -1,0 +1,87 @@
+<%include partials/header%>
+
+<div  class="container">
+   
+    <div class="row ">
+    <div  class="col-md-8 col-sm-8" style="padding:3em;">
+
+     <img src="<%=news.image%>" class="img-fluid img-thumbnail" alt="Responsive image">
+     <div class="show-section" style="background-color:#74d2f5;">
+      <div class="span">
+          <span><%= moment(news.createdAt).fromNow() %></span>
+      </div>
+     
+     <h3 class="text-center"><%= news.headline %></h3>
+     <p  class="text-center"><%= news.description %></p>
+    </div>
+
+
+      <!-- comment section -->
+
+      <br>
+      <div class="well">
+            <div class="text-right">
+                <a class="btn btn-success" href="/news/<%=news._id%>/comments/new">Add New Comment</a>
+            </div>
+            <hr>
+            <% news.comments.forEach(function(comment){ %>
+                
+                <div  style="padding: 1em; background-color:#28a745;border-radius: 0.2em;" class="row">
+                    <div class="col-md-12">
+                         <span style="text-align:right;padding-right:0.3em;"><%= moment(news.comments.createdAt).fromNow() %></span><em>By</em> 
+                        <strong style="padding-right:1em;padding-left:0.3em;"><%= comment.author.username %></strong>
+                        
+                   <div>
+                       <p style="padding:0.5em 0;"><%= comment.text %></p>
+                       
+                       
+                       <% if(currentUser && comment.author.id.equals(currentUser._id) || currentUser && currentUser.isAdmin){ %>
+                  
+                            <form style="display: inline" class="text-right" action="/news/<%=news._id%>/comments/<%=comment._id%>?_method=DELETE" method="POST">
+                                <button class="btn btn-xs btn-danger">DELETE</button>
+                                
+                            </form>
+
+                            <%}%>
+                            
+                      
+                   </div>
+                    </div>
+                </div>
+                <hr>
+            <% }) %>
+        </div>
+
+         
+
+
+
+
+
+    </div>
+
+    </div>
+
+
+
+    
+
+
+
+
+
+   
+
+
+</div>
+
+
+
+
+  
+
+
+
+
+
+<%include partials/footer%>
